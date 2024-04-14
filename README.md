@@ -6,7 +6,14 @@
 
 ### Quickstart
 
-To start the containers, run:
+Before starting the containers, set a `SECRET_KEY` in the `indico-prod/indico.conf` file. You can generate one by running the following snippet from the terminal:
+
+```sh
+python -c 'import os; print(repr(os.urandom(32)))'
+```
+
+Once this is done, start the containers with:
+
 ```sh
 $ cd indico-prod && docker compose up
 ```
